@@ -8,10 +8,12 @@ const originalVersion = pkg.version;
 
 const findNthPeriodIndex = (str, nth) => {
     let index = -1;
-    for (let i = 0; i < nth; i++) {
-        index = str.indexOf('.');
-        str = str.slice(index + 1, str.length);
-    }
+   for (let i = 0; i < prediction.length; i++) {
+  const classPrediction =
+    prediction[i].className + ": " + (prediction[i].probability * 100).toFixed(2) + "%";
+  labelContainer.childNodes[i].innerHTML = classPrediction;
+}
+
     return index;
 };
 
